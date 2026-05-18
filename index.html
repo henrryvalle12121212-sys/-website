@@ -25,6 +25,19 @@ section {
     padding: 80px 8%;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .btn {
     display: inline-block;
     padding: 14px 28px;
@@ -95,12 +108,6 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: fadeIn 1.2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-text {
@@ -153,30 +160,34 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-/* -------------------- OUR WORK -------------------- */
+/* -------------------- TESTIMONIALS -------------------- */
 
-#ourwork {
-    background: #ffffff;
+#testimonials {
+    background: #f8f8f8;
 }
 
-.work-grid {
+.testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
-.work-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.testimonial-box {
+    background: #fff;
+    padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
-.work-item img:hover {
-    transform: scale(1.03);
+.testimonial-box:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 /* -------------------- WHY US -------------------- */
@@ -206,6 +217,14 @@ nav a:hover {
 .why-icon {
     font-size: 40px;
     margin-bottom: 10px;
+}
+
+/* -------------------- SPANISH SECTION -------------------- */
+
+#spanish {
+    background: #f0f4ff;
+    padding: 80px 8%;
+    border-top: 4px solid #1E3A8A;
 }
 
 /* -------------------- CONTACT -------------------- */
@@ -254,7 +273,9 @@ footer {
     <nav>
         <a href="#services">Services</a>
         <a href="#ourwork">Our Work</a>
+        <a href="#testimonials">Reviews</a>
         <a href="#whyus">Why Us</a>
+        <a href="#spanish">Español</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -262,7 +283,7 @@ footer {
 </header>
 
 <!-- -------------------- HERO -------------------- -->
-<section class="hero">
+<section class="hero fade-in">
     <div class="hero-text">
         <h1>PAINTING & PRESSURE WASHING<br>YOU CAN TRUST.</h1>
         <p>Interior & exterior painting, cabinet refinishing, fence painting, touch‑ups, and professional pressure washing serving Conroe and surrounding Texas communities.</p>
@@ -275,7 +296,7 @@ footer {
 </section>
 
 <!-- -------------------- SERVICES -------------------- -->
-<section id="services">
+<section id="services" class="fade-in">
     <h2>Our Services</h2>
 
     <div class="services-grid">
@@ -325,42 +346,35 @@ footer {
     </div>
 </section>
 
-<!-- -------------------- OUR WORK -------------------- -->
-<section id="ourwork">
-    <h2>Our Work</h2>
-    <p>We take pride in every project. From kitchens and fences to exterior homes and pressure washing, our work reflects our commitment to quality, detail, and customer satisfaction.</p>
+<!-- -------------------- TESTIMONIALS -------------------- -->
+<section id="testimonials" class="fade-in">
+    <h2>Customer Reviews</h2>
 
-    <div class="work-grid">
+    <div class="testimonial-grid">
 
-        <div class="work-item">
-            <img src="imagenes/kitchen-finished.jpg" alt="Finished Kitchen">
+        <div class="testimonial-box">
+            <div class="stars">★★★★★</div>
+            <h3>Sarah M. — Conroe, TX</h3>
+            <p>“They did an amazing job painting our living room and kitchen. Clean lines, smooth finish, and they left everything spotless. Very professional and reliable.”</p>
         </div>
 
-        <div class="work-item">
-            <img src="imagenes/kitchen-construction.jpg" alt="Kitchen Under Construction">
+        <div class="testimonial-box">
+            <div class="stars">★★★★★</div>
+            <h3>Michael R. — Willis, TX</h3>
+            <p>“I hired them for exterior painting and pressure washing. The results were incredible. My home looks brand new again.”</p>
         </div>
 
-        <div class="work-item">
-            <img src="imagenes/carpentry-office.jpg" alt="Carpentry Office Project">
-        </div>
-
-        <div class="work-item">
-            <img src="imagenes/patio-ceiling.jpg" alt="Outdoor Patio Ceiling">
-        </div>
-
-        <div class="work-item">
-            <img src="imagenes/construction-house.jpg" alt="House Construction Work">
-        </div>
-
-        <div class="work-item">
-            <img src="imagenes/pressure-washing.jpg" alt="Pressure Washing Project">
+        <div class="testimonial-box">
+            <div class="stars">★★★★★</div>
+            <h3>Jennifer L. — The Woodlands, TX</h3>
+            <p>“Our cabinets look factory‑finished. Smooth, durable, and beautiful. Communication was excellent from start to finish.”</p>
         </div>
 
     </div>
 </section>
 
 <!-- -------------------- WHY US -------------------- -->
-<section id="whyus">
+<section id="whyus" class="fade-in">
     <h2>Why Homeowners Trust Us</h2>
 
     <div class="why-grid">
@@ -416,8 +430,18 @@ footer {
     </div>
 </section>
 
+<!-- -------------------- SPANISH SECTION -------------------- -->
+<section id="spanish" class="fade-in">
+    <h2>Servicios en Español</h2>
+    <p>Ofrecemos pintura interior, pintura exterior, gabinetes, pintura de cercas, retoques y lavado a presión. Llamamos antes de llegar, trabajamos limpio y siempre cumplimos con lo prometido.</p>
+
+    <p>Para una cotización rápida en español, llámanos:</p>
+
+    <a class="btn" href="tel:9362178245">Llamar en Español</a>
+</section>
+
 <!-- -------------------- CONTACT -------------------- -->
-<section id="contact">
+<section id="contact" class="fade-in">
     <div class="contact-box">
         <h2>Ready to Get Started?</h2>
         <p>Call us for a fast, free estimate. We answer and we show up.</p>
