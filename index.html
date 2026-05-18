@@ -1,3 +1,202 @@
-Hello world!
-<p>Probando cambios</p>
-<p>Segundo cambio</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chameleon Painting Services</title>
+
+<!-- ====== FONTS ====== -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ====== GLOBAL ====== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #333;
+    scroll-behavior: smooth;
+}
+h2 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* ====== ANIMATIONS ====== */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====== HEADER ====== */
+header {
+    background: #b30000;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header img {
+    height: 65px;
+}
+.call-btn {
+    background: white;
+    color: #b30000;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+.call-btn:hover {
+    background: #f2f2f2;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 55px;
+    right: 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.dropdown a {
+    display: block;
+    padding: 12px 18px;
+    color: #b30000;
+    text-decoration: none;
+    font-weight: 600;
+}
+.dropdown a:hover {
+    background: #eee;
+}
+
+/* ====== HERO ====== */
+.hero {
+    background: url('imagenes/kitchen-finished.jpg') center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+    text-align: center;
+}
+.hero h1 {
+    font-size: 55px;
+    font-weight: 600;
+}
+
+/* ====== SECTION STYLE ====== */
+.section {
+    padding: 40px 20px;
+}
+
+/* ====== GALLERY GRID ====== */
+.gallery {
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background: #333;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-top: 40px;
+}
+</style>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("scroll", () => {
+    document.querySelectorAll(".fade-up").forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            el.classList.add("visible");
+        }
+    });
+});
+</script>
+
+</head>
+<body>
+
+<header>
+    <img src="imagenes/logo-chameleon.png" alt="Chameleon Painting Logo">
+    <div class="call-btn" onclick="toggleMenu()">Call Now / Llama Ahora</div>
+    <div class="dropdown" id="dropdownMenu">
+        <a href="tel:9363140991">📞 English: (936) 314‑0991</a>
+        <a href="tel:9362178245">📞 Español: (936) 217‑8245</a>
+    </div>
+</header>
+
+<section class="hero fade-up">
+    <h1>Professional Painting & Remodeling Services</h1>
+</section>
+
+<!-- ====== KITCHENS ====== -->
+<h2 class="fade-up">Kitchens</h2>
+<section class="gallery fade-up">
+    <img src="imagenes/kitchen-finished.jpg">
+    <img src="imagenes/kitchen-construction.jpg">
+</section>
+
+<!-- ====== CARPENTRY ====== -->
+<h2 class="fade-up">Carpentry</h2>
+<section class="gallery fade-up">
+    <img src="imagenes/carpentry-office.jpg">
+</section>
+
+<!-- ====== PATIOS ====== -->
+<h2 class="fade-up">Outdoor Ceilings / Patios</h2>
+<section class="gallery fade-up">
+    <img src="imagenes/patio-ceiling.jpg">
+</section>
+
+<!-- ====== CONSTRUCTION ====== -->
+<h2 class="fade-up">Construction</h2>
+<section class="gallery fade-up">
+    <img src="imagenes/construction-house.jpg">
+</section>
+
+<!-- ====== PRESSURE WASHING ====== -->
+<h2 class="fade-up">Pressure Washing</h2>
+<section class="gallery fade-up">
+    <img src="imagenes/pressure-washing.jpg">
+</section>
+
+<footer>
+    © 2026 Chameleon Painting Services — All Rights Reserved
+</footer>
+
+</body>
+</html>
