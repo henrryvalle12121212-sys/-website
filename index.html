@@ -157,6 +157,32 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+/* -------------------- OUR WORK -------------------- */
+
+#ourwork {
+    background: #ffffff;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.work-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.work-item img:hover {
+    transform: scale(1.03);
+}
+
 /* -------------------- WHY US -------------------- */
 
 #whyus {
@@ -203,7 +229,7 @@ nav a:hover {
 .phone-number {
     font-size: 26px;
     font-weight: bold;
-    color: #1E3A8A;
+    color: #11E3A8A;
     margin: 10px 0;
 }
 
@@ -235,6 +261,7 @@ footer {
 
     <nav>
         <a href="#services">Services</a>
+        <a href="#ourwork">Our Work</a>
         <a href="#whyus">Why Us</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -249,7 +276,7 @@ footer {
         <p>Interior & exterior painting, cabinet refinishing, fence & deck painting, and professional pressure washing serving Conroe and surrounding Texas communities.</p>
 
         <a class="btn" href="tel:9363140991">Call English</a>
-        <a class="btn" href="tel:9362178245" style="margin-left:10px;">Llamar Español</a>
+        <a class="btn" href="tel:9362178245" style="margin-left:10px;">Call Spanish</a>
     </div>
 
     <img src="imagenes/logo-chameleon.png" class="hero-logo">
@@ -261,95 +288,110 @@ footer {
 
     <div class="services-grid">
 
-        <!-- Interior Painting -->
         <div class="service-box">
             <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6m7-9l-4 4m0 0l-4-4m4 4v6a2 2 0 11-4 0v-6m4 0H7" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6" />
                 </svg>
             </div>
-            <h3>Pintura Interior</h3>
-            <p>Pintado profesional de cuartos, salas, baños, techos y más. Acabados limpios, duraderos y de alta calidad.</p>
+            <h3>Interior Painting</h3>
+            <p>Professional painting for bedrooms, living rooms, ceilings, and more. Clean, durable finishes.</p>
         </div>
 
-        <!-- Exterior Painting -->
         <div class="service-box">
             <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21H3V9.75z" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                    <path d="M3 9.75L12 3l9 6.75V21H3V9.75z" />
                 </svg>
             </div>
-            <h3>Pintura Exterior</h3>
-            <p>Protección y belleza para la fachada de tu hogar. Pintura resistente al clima y aplicada con preparación profesional.</p>
+            <h3>Exterior Painting</h3>
+            <p>Weather‑resistant exterior painting with professional preparation and long‑lasting results.</p>
         </div>
 
-        <!-- Cabinet Painting -->
         <div class="service-box">
             <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <rect x="3" y="4" width="18" height="8" rx="2" />
                     <rect x="3" y="14" width="18" height="6" rx="2" />
                 </svg>
             </div>
-            <h3>Pintura de Gabinetes</h3>
-            <p>Renovación completa de gabinetes de cocina y baño con acabados suaves, modernos y duraderos.</p>
+            <h3>Cabinet Painting</h3>
+            <p>Kitchen and bathroom cabinet refinishing with smooth, modern, durable finishes.</p>
         </div>
 
-        <!-- Fence Painting -->
         <div class="service-box">
             <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path d="M4 3v18M8 3v18M12 3v18M16 3v18M20 3v18M2 9h20M2 15h20" />
                 </svg>
             </div>
-            <h3>Pintura de Cercas</h3>
-            <p>Pintura y sellado de cercas para proteger la madera y mejorar la apariencia de tu propiedad.</p>
+            <h3>Fence Painting</h3>
+            <p>Fence painting and sealing to protect wood and improve curb appeal.</p>
         </div>
 
-        <!-- Deck Painting -->
         <div class="service-box">
             <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path d="M3 21h18M3 10h18M3 10l9-7 9 7" />
                 </svg>
             </div>
-            <h3>Pintura de Decks</h3>
-            <p>Protección y renovación de decks y terrazas con pintura y selladores de alta calidad.</p>
+            <h3>Deck Painting</h3>
+            <p>Deck and patio restoration with high‑quality paints and sealers.</p>
         </div>
 
-        <!-- Repainting -->
         <div class="service-box">
             <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path d="M4 4v6h6M20 20v-6h-6" />
                     <path d="M5 19A9 9 0 0119 5" />
                 </svg>
             </div>
-            <h3>Repintado / Retocar</h3>
-            <p>Reparación de pintura vieja, manchas, daños y áreas deterioradas para dejar tu hogar como nuevo.</p>
+            <h3>Repainting</h3>
+            <p>Touch‑ups and repainting to restore damaged or faded surfaces.</p>
         </div>
 
-        <!-- Pressure Washing -->
         <div class="service-box">
             <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path d="M12 3v3m0 12v3m9-9h-3M6 12H3" />
-                    <path d="M18.364 5.636l-2.121 2.121M8.757 15.243l-2.121 2.121" />
                 </svg>
             </div>
             <h3>Pressure Washing</h3>
-            <p>Limpieza profunda de driveways, paredes, patios, cocheras y más. Eliminamos moho, suciedad y manchas difíciles.</p>
+            <p>Deep cleaning for driveways, patios, walls, garages, and more.</p>
         </div>
 
-        <!-- Exterior Cleaning -->
-        <div class="service-box">
-            <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
-                    <path d="M12 2s7 6 7 12a7 7 0 11-14 0c0-6 7-12 7-12z" />
-                </svg>
-            </div>
-            <h3>Limpieza Exterior</h3>
-            <p>Lavado exterior completo para restaurar el color original de tu hogar y eliminar acumulación de suciedad.</p>
+    </div>
+</section>
+
+<!-- -------------------- OUR WORK -------------------- -->
+<section id="ourwork">
+    <h2>Our Work</h2>
+    <p>Here are some of our recent projects, including kitchens, carpentry, patios, construction, and pressure washing.</p>
+
+    <div class="work-grid">
+
+        <div class="work-item">
+            <img src="imagenes/kitchen-finished.jpg" alt="Finished Kitchen">
+        </div>
+
+        <div class="work-item">
+            <img src="imagenes/kitchen-construction.jpg" alt="Kitchen Under Construction">
+        </div>
+
+        <div class="work-item">
+            <img src="imagenes/carpentry-office.jpg" alt="Carpentry Office Project">
+        </div>
+
+        <div class="work-item">
+            <img src="imagenes/patio-ceiling.jpg" alt="Outdoor Patio Ceiling">
+        </div>
+
+        <div class="work-item">
+            <img src="imagenes/construction-house.jpg" alt="House Construction Work">
+        </div>
+
+        <div class="work-item">
+            <img src="imagenes/pressure-washing.jpg" alt="Pressure Washing Project">
         </div>
 
     </div>
@@ -367,45 +409,45 @@ footer {
 
         <div class="why-box">
             <div class="why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path d="M12 3l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 10h7z" />
                 </svg>
             </div>
             <h3>Top‑Rated Quality</h3>
-            <p>Acabados profesionales, limpios y duraderos en cada proyecto.</p>
+            <p>Professional, clean, long‑lasting finishes on every project.</p>
         </div>
 
         <div class="why-box">
             <div class="why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <circle cx="12" cy="12" r="9" />
                     <path d="M12 7v5l3 2" />
                 </svg>
             </div>
             <h3>On‑Time & Reliable</h3>
-            <p>Siempre llegamos, siempre cumplimos, siempre terminamos.</p>
+            <p>We show up, we communicate, and we finish on schedule.</p>
         </div>
 
         <div class="why-box">
             <div class="why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path d="M9 12l2 2 4-4" />
                     <circle cx="12" cy="12" r="9" />
                 </svg>
             </div>
             <h3>Free Estimates</h3>
-            <p>Precios claros, honestos y sin sorpresas.</p>
+            <p>Clear, honest pricing with no surprises.</p>
         </div>
 
         <div class="why-box">
             <div class="why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#1E3A8A">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
                     <path d="M9 12l2 2 4-4" />
                 </svg>
             </div>
             <h3>Clean & Professional</h3>
-            <p>Protegemos tu hogar y dejamos todo más limpio que como lo encontramos.</p>
+            <p>We protect your home and leave everything spotless.</p>
         </div>
 
     </div>
@@ -423,7 +465,7 @@ footer {
         <a href="tel:9363140991" class="btn">Call English</a>
 
         <div class="phone-number" style="margin-top:25px;">(936) 217‑8245</div>
-        <a href="tel:9362178245" class="btn">Llamar Español</a>
+        <a href="tel:9362178245" class="btn">Call Spanish</a>
     </div>
 </section>
 
@@ -435,4 +477,3 @@ footer {
 
 </body>
 </html>
-
