@@ -3,200 +3,411 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chameleon Painting Services</title>
-
-<!-- ====== FONTS ====== -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Chameleon Painting & Remodeling</title>
 
 <style>
-/* ====== GLOBAL ====== */
+
+/* -------------------- GLOBAL -------------------- */
+
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     background: #ffffff;
-    color: #333;
+    color: #222;
     scroll-behavior: smooth;
 }
-h2 {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 32px;
-    font-weight: 600;
+
+h1, h2, h3 {
+    font-weight: 700;
 }
 
-/* ====== ANIMATIONS ====== */
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
-}
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
+section {
+    padding: 80px 8%;
 }
 
-/* ====== HEADER ====== */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #d32f2f;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b71c1c;
+}
+
+/* -------------------- HEADER -------------------- */
+
 header {
-    background: #b30000;
-    color: white;
-    padding: 15px 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 15px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
-header img {
-    height: 65px;
+
+header .logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #d32f2f;
 }
-.call-btn {
-    background: white;
-    color: #b30000;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    position: relative;
-    transition: 0.3s;
-}
-.call-btn:hover {
-    background: #f2f2f2;
-}
-.dropdown {
-    display: none;
-    position: absolute;
-    background: white;
-    top: 55px;
-    right: 0;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-.dropdown a {
-    display: block;
-    padding: 12px 18px;
-    color: #b30000;
+
+nav a {
+    margin: 0 18px;
     text-decoration: none;
+    color: #333;
     font-weight: 600;
 }
-.dropdown a:hover {
-    background: #eee;
+
+nav a:hover {
+    color: #d32f2f;
 }
 
-/* ====== HERO ====== */
+.call-btn {
+    background: #d32f2f;
+    padding: 10px 18px;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* -------------------- HERO -------------------- */
+
 .hero {
-    background: url('imagenes/kitchen-finished.jpg') center/cover no-repeat;
-    height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.5);
-    text-align: center;
+    background: #f5f5f5;
+    padding: 180px 8% 140px;
 }
+
 .hero h1 {
-    font-size: 55px;
-    font-weight: 600;
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
-/* ====== SECTION STYLE ====== */
-.section {
-    padding: 40px 20px;
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-/* ====== GALLERY GRID ====== */
-.gallery {
-    padding: 40px 20px;
+/* -------------------- SERVICES -------------------- */
+
+.services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 18px;
-}
-.gallery img {
-    width: 100%;
-    border-radius: 12px;
-    transition: 0.4s;
-}
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    gap: 35px;
 }
 
-/* ====== FOOTER ====== */
-footer {
-    background: #333;
-    color: white;
+.service-box {
     padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    border-color: #d32f2f;
+}
+
+.service-icon svg {
+    width: 42px;
+    height: 42px;
+    stroke: #d32f2f;
+    stroke-width: 2;
+    fill: none;
+    margin-bottom: 15px;
+}
+
+/* -------------------- GALLERY -------------------- */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* -------------------- WHY US -------------------- */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.why-box {
+    padding: 20px;
+    border-left: 4px solid #d32f2f;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.why-icon svg {
+    width: 36px;
+    height: 36px;
+    stroke: #d32f2f;
+    stroke-width: 2;
+    fill: none;
+    margin-bottom: 10px;
+}
+
+/* -------------------- CONTACT -------------------- */
+
+.contact-box {
+    text-align: center;
+}
+
+.phone-number {
+    font-size: 26px;
+    font-weight: bold;
+    color: #d32f2f;
+    margin: 10px 0;
+}
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 8%;
     text-align: center;
     margin-top: 40px;
 }
+
 </style>
-
-<script>
-function toggleMenu() {
-    const menu = document.getElementById("dropdownMenu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
-document.addEventListener("scroll", () => {
-    document.querySelectorAll(".fade-up").forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            el.classList.add("visible");
-        }
-    });
-});
-</script>
-
 </head>
 <body>
 
+<!-- -------------------- HEADER -------------------- -->
 <header>
-    <img src="imagenes/logo-chameleon.png" alt="Chameleon Painting Logo">
-    <div class="call-btn" onclick="toggleMenu()">Call Now / Llama Ahora</div>
-    <div class="dropdown" id="dropdownMenu">
-        <a href="tel:9363140991">📞 English: (936) 314‑0991</a>
-        <a href="tel:9362178245">📞 Español: (936) 217‑8245</a>
-    </div>
+    <div class="logo">CHAMELEON</div>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#whyus">Why Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="call-btn" href="tel:9363140991">Call Now</a>
 </header>
 
-<section class="hero fade-up">
-    <h1>Professional Painting & Remodeling Services</h1>
+<!-- -------------------- HERO -------------------- -->
+<section class="hero">
+    <h1>PAINTING & REMODELING<br>YOU CAN TRUST.</h1>
+    <p>Professional painting, carpentry, remodeling, and pressure washing serving Conroe and surrounding Texas communities. High‑quality work, honest pricing, and reliable service.</p>
+    <a class="btn" href="tel:9363140991">Call for a Free Estimate</a>
 </section>
 
-<!-- ====== KITCHENS ====== -->
-<h2 class="fade-up">Kitchens</h2>
-<section class="gallery fade-up">
-    <img src="imagenes/kitchen-finished.jpg">
-    <img src="imagenes/kitchen-construction.jpg">
+<!-- -------------------- SERVICES -------------------- -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services-grid">
+
+        <!-- Painting -->
+        <div class="service-box">
+            <div class="service-icon">
+                <!-- Heroicons: Paint Brush -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6m7-9l-4 4m0 0l-4-4m4 4v6a2 2 0 11-4 0v-6m4 0H7" />
+                </svg>
+            </div>
+            <h3>Interior & Exterior Painting</h3>
+            <p>Transform your home with flawless, long‑lasting finishes. We prepare surfaces properly and use premium coatings for smooth, durable, and beautiful results.</p>
+        </div>
+
+        <!-- Kitchen Remodeling -->
+        <div class="service-box">
+            <div class="service-icon">
+                <!-- Heroicons: Home Modern -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4 10v10h6V14h4v6h6V10" />
+                </svg>
+            </div>
+            <h3>Kitchen Remodeling</h3>
+            <p>Modern, functional, and stylish kitchen upgrades. From cabinets to layout improvements, we create spaces that increase comfort and home value.</p>
+        </div>
+
+        <!-- Carpentry -->
+        <div class="service-box">
+            <div class="service-icon">
+                <!-- Heroicons: Wrench & Screwdriver -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 21l6-6m0 0l3 3m-3-3l-3-3m9-9l3 3m0 0l-3 3m3-3l3-3m-6 6l-3 3" />
+                </svg>
+            </div>
+            <h3>Carpentry & Custom Woodwork</h3>
+            <p>Precision carpentry for trims, doors, frames, moldings, and custom wood features. Strong, clean, and professional craftsmanship.</p>
+        </div>
+
+        <!-- Outdoor Ceilings -->
+        <div class="service-box">
+            <div class="service-icon">
+                <!-- Heroicons: Home -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21H3V9.75z" />
+                </svg>
+            </div>
+            <h3>Outdoor Ceilings & Patios</h3>
+            <p>Beautifully crafted outdoor ceilings and patio structures built to withstand Texas weather while enhancing your outdoor living space.</p>
+        </div>
+
+        <!-- Construction -->
+        <div class="service-box">
+            <div class="service-icon">
+                <!-- Heroicons: Building Office -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M4 21V3h6v18m4 0V7h6v14" />
+                </svg>
+            </div>
+            <h3>Construction & Repairs</h3>
+            <p>Reliable construction services for home improvements, structural fixes, framing, drywall, and general repairs. Done right the first time.</p>
+        </div>
+
+        <!-- Pressure Washing -->
+        <div class="service-box">
+            <div class="service-icon">
+                <!-- Heroicons: Sparkles -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3m9-9h-3M6 12H3m15.364-6.364l-2.121 2.121M8.757 15.243l-2.121 2.121m0-12.728l2.121 2.121m8.486 8.486l2.121 2.121" />
+                </svg>
+            </div>
+            <h3>Pressure Washing</h3>
+            <p>Deep‑clean pressure washing that restores the original color of driveways, siding, patios, and walkways by removing dirt, mold, and stains.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- ====== CARPENTRY ====== -->
-<h2 class="fade-up">Carpentry</h2>
-<section class="gallery fade-up">
-    <img src="imagenes/carpentry-office.jpg">
+<!-- -------------------- OUR WORK -------------------- -->
+<section id="work">
+    <h2>Our Work</h2>
+
+    <div class="gallery-grid">
+        <img src="imagenes/kitchen-finished.jpg">
+        <img src="imagenes/kitchen-construction.jpg">
+        <img src="imagenes/carpentry-office.jpg">
+        <img src="imagenes/patio-ceiling.jpg">
+        <img src="imagenes/construction-house.jpg">
+        <img src="imagenes/pressure-washing.jpg">
+    </div>
 </section>
 
-<!-- ====== PATIOS ====== -->
-<h2 class="fade-up">Outdoor Ceilings / Patios</h2>
-<section class="gallery fade-up">
-    <img src="imagenes/patio-ceiling.jpg">
+<!-- -------------------- WHY US -------------------- -->
+<section id="whyus">
+    <h2>Why Homeowners Trust Us</h2>
+
+    <div class="why-grid">
+
+        <!-- Top Rated -->
+        <div class="why-box">
+            <div class="why-icon">
+                <!-- Heroicons: Star -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 10h7z" />
+                </svg>
+            </div>
+            <h3>Top‑Rated Quality</h3>
+            <p>Customers trust us for consistent, high‑quality workmanship. Every project is completed with attention to detail and long‑lasting results.</p>
+        </div>
+
+        <!-- 24/7 -->
+        <div class="why-box">
+            <div class="why-icon">
+                <!-- Heroicons: Clock -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <circle cx="12" cy="12" r="9" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2" />
+                </svg>
+            </div>
+            <h3>24/7 Availability</h3>
+            <p>Whether it’s a last‑minute repair or urgent request, we’re available around the clock to serve Conroe and surrounding areas.</p>
+        </div>
+
+        <!-- Free Estimates -->
+        <div class="why-box">
+            <div class="why-icon">
+                <!-- Heroicons: Check Badge -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <h3>Free Estimates</h3>
+            <p>Clear, honest, and transparent pricing with no surprises. We provide free estimates for all services.</p>
+        </div>
+
+        <!-- Experienced Crew -->
+        <div class="why-box">
+            <div class="why-icon">
+                <!-- Heroicons: User Group -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2m14-10a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </div>
+            <h3>Experienced Crew</h3>
+            <p>Skilled professionals with years of experience in painting, carpentry, remodeling, and construction.</p>
+        </div>
+
+        <!-- Clean & Professional -->
+        <div class="why-box">
+            <div class="why-icon">
+                <!-- Heroicons: Shield Check -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                </svg>
+            </div>
+            <h3>Clean & Professional</h3>
+            <p>We respect your home. Our team protects your property, works neatly, and leaves every space cleaner than we found it.</p>
+        </div>
+
+        <!-- Local & Trusted -->
+        <div class="why-box">
+            <div class="why-icon">
+                <!-- Heroicons: Map Pin -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#d32f2f">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.5 7-10a7 7 0 10-14 0c0 5.5 7 10 7 10z" />
+                    <circle cx="12" cy="11" r="3" />
+                </svg>
+            </div>
+            <h3>Local & Trusted</h3>
+            <p>Proudly serving Conroe, TX and surrounding communities with reliable service and strong customer relationships.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- ====== CONSTRUCTION ====== -->
-<h2 class="fade-up">Construction</h2>
-<section class="gallery fade-up">
-    <img src="imagenes/construction-house.jpg">
+<!-- -------------------- CONTACT -------------------- -->
+<section id="contact">
+    <div class="contact-box">
+        <h2>Ready to Get Started?</h2>
+        <p>Call us for a fast, free estimate. We answer and we show up.</p>
+
+        <div class="phone-number">(936) 314‑0991</div>
+        <div class="phone-number">(936) 217‑8245</div>
+
+        <p>Conroe, TX & Surrounding Areas · Open 24/7</p>
+
+        <a class="btn" href="tel:9363140991">Call Now</a>
+    </div>
 </section>
 
-<!-- ====== PRESSURE WASHING ====== -->
-<h2 class="fade-up">Pressure Washing</h2>
-<section class="gallery fade-up">
-    <img src="imagenes/pressure-washing.jpg">
-</section>
-
-<footer>
-    © 2026 Chameleon Painting Services — All Rights Reserved
-</footer>
-
-</body>
-</html>
+<!-- -------------------- FOOTER -------------------- -->
+<footer
